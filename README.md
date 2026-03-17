@@ -48,15 +48,14 @@ See details → [data/README.md](data/README.md)
 git clone https://github.com/raneesur75-ship-it/driver-drowsiness-detection-using-deep-learning.git
 cd driver-drowsiness-detection-using-deep-learning
 
-2. Install packages
-
 pip install -r requirements.txt
-
-3. Run the real-time demo
 
 python src/realtime_detector.py
 
-Note:When you run it, your webcam will open with live detection, fatigue score, and alarm!
+Note: This is the correct file name (realtime_detector.py).
+Your webcam will open instantly with live detection, fatigue score, graphs, and alarm sound!
+
+```
 
 
 
