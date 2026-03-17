@@ -42,25 +42,27 @@ Full dataset is large, so not on GitHub. Sample images are in `data/sample/`.
 See details → [data/README.md](data/README.md)
 
 ## 💻 Installation & How to Run
+
 ### 1. Clone the repo
-### 1. Clone the repo
-markdown
+```bash
 git clone https://github.com/raneesur75-ship-it/driver-drowsiness-detection-using-deep-learning.git
 cd driver-drowsiness-detection-using-deep-learning
 
-2. Install packagesbash
+2. Install packages
 
 pip install -r requirements.txt
 
-3. Run the real-time demobash
+3. Run the real-time demo
 
 python src/realtime_detector.py
 
-Note: This is the correct file name (I checked your src folder — it is realtime_detector.py).
-When you run it, your webcam will open instantly with live detection, fatigue score, graphs, and alarm sound!
+Note:When you run it, your webcam will open with live detection, fatigue score, and alarm!
+
+
 
 
 ## 🏗️ System Architecture
+
 The system uses a **hybrid approach** (fast rule-based + deep learning) for reliable real-time drowsiness detection.
 
 ### Flow:
@@ -73,4 +75,4 @@ The system uses a **hybrid approach** (fast rule-based + deep learning) for reli
 
 **Why it works**: Lightweight (MobileNetV2 runs on laptop/mobile), very accurate, and almost no false alarms.
 
-(Architecture diagram coming soon — we will add a screenshot here next!)
+(Architecture diagram coming soon — we will add screenshot here next!)
