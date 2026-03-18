@@ -63,32 +63,55 @@ git clone https://github.com/raneesur75-ship-it/driver-drowsiness-detection-usin
 cd driver-drowsiness-detection-using-deep-learning
 
 ```
-2. Install packages
+### 2. Install packages
 ```
 
 pip install -r requirements.txt
 
 ```
-3. Run the real-time demo
+### 3. Run the real-time demo
 ```
 
 python src/realtime_detector.py
 
 ```
-Note: Your webcam will open instantly with live detection, fatigue score, graphs, and alarm sound! System ArchitectureThe system uses a hybrid approach (fast rule-based + deep learning) for reliable real-time drowsiness detection.Flow:Webcam Input → Live video frames  
-MediaPipe Face Mesh → 468 facial landmarks  
-EAR + MAR Calculation → Quick eye/yawn detection  
-MobileNetV2 CNN → Classifies eyes & mouth (96.5% accurate)  
-Decision Fusion → Combines everything into Fatigue Score  
-Alert System → Alarm + UI graphs if drowsy
+###N ote: Your webcam 🎥 will open instantly with live detection, fatigue score, graphs, and alarm sound!
 
-Why it works: Lightweight (runs on laptop/mobile), very accurate, and almost no false alarms. Key InnovationsHybrid CNN + EAR + MAR system  
-AI-based data augmentation using Stable Diffusion  
-Real-time fatigue scoring (not just classification)  
-Multi-condition alarm logic
 
- Future ImprovementsNight vision support (infrared camera)  
-Mobile app (Android/iOS deployment)  
-Cloud-based monitoring  
-Voice-based alerts
+## 🏗️ System Architecture
+
+```
+Webcam → Face Mesh → EAR/MAR → CNN → Fatigue Score → Alarm
+
+```
+The system uses a hybrid approach (fast rule-based + deep learning) for reliable real-time drowsiness detection.
+
+### 💡 Why This Works
+
+Lightweight → runs on laptop
+
+Hybrid approach → reduces false alarms
+
+Real-time processing → practical deployment
+
+## 🚀 Key Innovations
+
+✅ Hybrid CNN + EAR + MAR system
+
+✅ AI-based data augmentation using Stable Diffusion
+
+✅ Real-time fatigue scoring (not just classification)
+
+✅ Multi-condition alarm logic
+
+## 🔮 Future Improvements
+
+Night vision (infrared camera)
+
+Mobile app (Android/iOS)
+
+Cloud-based monitoring system
+
+Voice-based alerts✅
+
 
