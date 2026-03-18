@@ -4,81 +4,6 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10%2B-orange)](https://tensorflow.org)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.6%2B-green)](https://opencv.org)
 [![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10%2B-purple)](https://mediapipe.dev)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-> Real-time driver drowsiness detection using CNN (MobileNetV2) and Computer Vision.  
-> **96.5% accuracy** | **4-class classification** | **Real-time alarm system**
-
-## 📸 Demo
-
-![Live Detection](screenshots/demo.png)  
-![Fatigue Score & Graphs](screenshots/graphs.png)  
-![Alarm Triggering](screenshots/alarm.png)
-
-*(Upload your 3 screenshots to the `screenshots/` folder — I already showed you how. If you haven’t done it yet, just tell me and I’ll repeat the 3 steps.)*
-
-## 🎯 Why This Project Matters
-
-Drowsy driving is a major cause of road accidents worldwide.  
-This system detects early signs of fatigue and alerts the driver in real-time — a lightweight, low-cost, deployable safety solution.
-
-## 🔥 Key Features
-
-- **Real-time Detection**: Webcam-based monitoring with MediaPipe Face Mesh (468 landmarks)  
-- **Dual Analysis**: Eye Aspect Ratio (EAR) + Mouth Aspect Ratio (MAR) + CNN classification  
-- **AI-Powered**: MobileNetV2 CNN with **96.5%** test accuracy  
-- **Smart Augmentation**: Stable Diffusion for synthetic training data  
-- **Professional UI**: Live fatigue score (0–100%), real-time graphs, status indicators  
-- **Multi-trigger Alarm**: Sound alerts for eye closure, yawning, head nodding
-
-## 📊 Performance Metrics
-
-| Class       | Accuracy | Notes                     |
-|-------------|----------|---------------------------|
-| Closed_Eyes | ~99%     | Almost perfect detection  |
-| Open_Eyes   | ~99%     | Clear pattern recognition |
-| No_Yawn     | ~95%     | Good distinction          |
-| Yawn        | 95.8%    | High recall for safety    |
-
-**Overall Test Accuracy: 96.50%** on 572 test images
-
-## 📚 Dataset
-
-- **Total images**: 2,845  
-- **Split**: 80% training + 20% testing (572 test images)  
-- **4 Classes**: Closed_Eyes, Open_Eyes, No_Yawn, Yawn (balanced)
-
-**Sources**:
-- Public Kaggle datasets  
-- Self-collected photos/videos from online sources  
-- Augmented with OpenCV + Stable Diffusion (synthetic images)
-
-Full dataset is large, so not on GitHub. Sample images are in `data/sample/`.  
-See details → [data/README.md](data/README.md)
-
-## 🏗️ System Architecture
-
-```mermaid
-graph TD
-    A[Webcam Input] --> B[MediaPipe Face Mesh<br/>468 landmarks]
-    B --> C[EAR + MAR Calculation]
-    B --> D[MobileNetV2 CNN<br/>Eye/Mouth Classification]
-    C --> E[Decision Fusion<br/>Fatigue Score]
-    D --> E
-    E --> F{Score > Threshold?}
-    F -->|Yes| G[Multi-Trigger Alarm<br/>+ UI Graphs]
-    F -->|No| H[Continue Monitoring]
-```
-
-
-
-
-# 🚗 Driver Drowsiness Detection System
-
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10%2B-orange)](https://tensorflow.org)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.6%2B-green)](https://opencv.org)
-[![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10%2B-purple)](https://mediapipe.dev)
 
 > Real-time driver drowsiness detection using CNN (MobileNetV2) and Computer Vision.  
 > **96.5% accuracy** | **4-class classification** | **Real-time alarm system**
@@ -149,6 +74,18 @@ Your webcam 🎥 will open instantly with live detection, fatigue score, graphs,
 
 
 ## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    A[Webcam Input] --> B[MediaPipe Face Mesh<br/>468 landmarks]
+    B --> C[EAR + MAR Calculation]
+    B --> D[MobileNetV2 CNN<br/>Eye/Mouth Classification]
+    C --> E[Decision Fusion<br/>Fatigue Score]
+    D --> E
+    E --> F{Score > Threshold?}
+    F -->|Yes| G[Multi-Trigger Alarm<br/>+ UI Graphs]
+    F -->|No| H[Continue Monitoring]
+```
 
 ```
 Webcam → Face Mesh → EAR/MAR → CNN → Fatigue Score → Alarm
