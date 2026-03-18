@@ -8,12 +8,18 @@
 > Real-time driver drowsiness detection using CNN (MobileNetV2) and Computer Vision.  
 > **96.5% accuracy** | **4-class classification** | **Real-time alarm system**
 
-## 📸 Demo 
+## 📸 Demo
 
-![Live Detection](screenshots/demo.gif)  
-![Fatigue Score & Graphs](screenshots/graphs.png)  
-![Alarm Triggering](screenshots/alarm.png)
+Here’s how the system looks in real-time:
 
+<p align="center">
+  <img src="capture_1773825174.png" alt="Live Detection - Eyes Closed & Alarm" width="45%">
+  <img src="screenshots/graphs.png" alt="Fatigue Score & Live Graphs" width="45%">
+</p>
+
+<p align="center">
+  <img src="screenshots/alarm.png" alt="Alarm Triggering" width="60%">
+</p>
 
 ## 🎯 Why This Project Matters
 
