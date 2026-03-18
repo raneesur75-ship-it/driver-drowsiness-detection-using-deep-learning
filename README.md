@@ -1,50 +1,132 @@
-# 🚗 Driver Drowsiness Detection System
+🚗 Driver Drowsiness Detection System
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10%2B-orange)](https://tensorflow.org)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.6%2B-green)](https://opencv.org)
+Python | TensorFlow | OpenCV | MediaPipe
 
-&gt; Real-time driver drowsiness detection using CNN (MobileNetV2) and Computer Vision.
-&gt; **96.5% accuracy** | **4-class classification** | **Real-time alarm system**
+🚨 A real-time AI system that detects driver fatigue using Computer Vision and Deep Learning
+⚡ 96.5% Accuracy | 👁️ Eye + Mouth Analysis | 🔊 Smart Alarm System
 
-## 🎯 Features
+📸 Demo
 
-- **Real-time Detection**: Webcam-based monitoring with MediaPipe Face Mesh
-- **Dual Analysis**: Eye Aspect Ratio (EAR) + Mouth Aspect Ratio (MAR) + CNN classification
-- **AI-Powered**: MobileNetV2 CNN with 96.5% test accuracy
-- **Smart Augmentation**: Stable Diffusion for synthetic training data generation
-- **Professional UI**: Live graphs, fatigue score, status indicators
-- **Multi-trigger Alarm**: Sound alerts for closed eyes, yawning, head nodding
+👉 (Add screenshots / GIF here — THIS IS CRITICAL)
 
-## 📊 Performance Metrics
+Live detection interface
 
-| Class | Accuracy | Notes |
-|-------|----------|-------|
-| Closed_Eyes | ~99% | Almost perfect detection |
-| Open_Eyes | ~99% | Clear pattern recognition |
-| No_Yawn | ~95% | Good distinction |
-| Yawn | 95.8% | High recall for safety |
+Fatigue score + graphs
 
-**Overall Test Accuracy: 96.50%** on 572 test images
+Alarm triggering
 
-## 📚 Dataset
+🎯 Why This Project Matters
 
-- **Total images**: 2,845  
-- **Split**: 80% training + 20% testing (572 test images)  
-- **4 Classes**: Closed_Eyes, Open_Eyes, No_Yawn, Yawn (balanced)
+Drowsy driving is a major cause of road accidents worldwide.
+This system helps prevent accidents by:
 
-**Sources**:
-- Public Kaggle datasets  
-- Self-collected photos/videos from online sources  
-- Augmented with OpenCV + Stable Diffusion (synthetic images)
+Detecting early signs of fatigue
 
-Full dataset is large, so not on GitHub. Sample images are in `data/sample/`.  
-See details → [data/README.md](data/README.md)
+Alerting drivers in real-time
+
+Providing a low-cost, deployable safety solution
+
+🔥 Key Features
+
+🎥 Real-time Detection
+Webcam-based monitoring using MediaPipe Face Mesh (468 landmarks)
+
+🧠 Hybrid Intelligence System
+Combines:
+
+Eye Aspect Ratio (EAR)
+
+Mouth Aspect Ratio (MAR)
+
+CNN (MobileNetV2)
+
+🤖 Deep Learning Model
+
+MobileNetV2 (Transfer Learning)
+
+96.5% test accuracy
+
+🎨 Smart Data Augmentation
+
+Stable Diffusion (AI-generated images)
+
+Improved dataset diversity
+
+📊 Professional UI
+
+Live fatigue score (0–100%)
+
+Real-time graphs (EAR/MAR trends)
+
+Status indicators (AWAKE / WARNING / ALARM)
+
+🔔 Multi-Trigger Alarm System
+
+Eye closure
+
+Yawning
+
+Head nodding
+
+📊 Performance Metrics
+Class	Accuracy	Notes
+Closed_Eyes	~99%	Very strong detection
+Open_Eyes	~99%	Highly reliable
+No_Yawn	~95%	Minor confusion cases
+Yawn	95.8%	High recall (safety-critical)
+
+👉 Overall Accuracy: 96.50% (572 test images)
+
+📚 Dataset
+
+Total Images: 2,845
+
+Split: 80% training / 20% testing
+
+Classes: 4 (Balanced dataset)
+
+Sources:
+
+Kaggle datasets
+
+Self-collected images/videos
+
+Stable Diffusion augmentation
+
+📁 Full dataset not included (size), sample available in data/sample/
+
+
+🏗️ System Architecture
+
+```
+Webcam → Face Mesh → EAR/MAR → CNN → Fatigue Score → Alarm
+```
+💡 Why This Works
+
+Lightweight → runs on laptop
+
+Hybrid approach → reduces false alarms
+
+Real-time processing → practical deployment
+
+The system uses a **hybrid approach** (fast rule-based + deep learning) for reliable real-time drowsiness detection.
+
+### Flow:
+1. **Webcam Input** → Live video frames  
+2. **MediaPipe Face Mesh** → 468 facial landmarks  
+3. **EAR + MAR Calculation** → Quick eye/yawn detection  
+4. **MobileNetV2 CNN** → Classifies eyes & mouth (96.5% accurate)  
+5. **Decision Fusion** → Combines everything into Fatigue Score  
+6. **Alert System** → Alarm + UI graphs if drowsy  
+
+**Why it works**: Lightweight (MobileNetV2 runs on laptop/mobile), very accurate, and almost no false alarms.
+
+(Architecture diagram coming soon — we will add screenshot here next!)
 
 ## 💻 Installation & How to Run
 
 ### 1. Clone the repo
-```bash
+```
 git clone https://github.com/raneesur75-ship-it/driver-drowsiness-detection-using-deep-learning.git
 cd driver-drowsiness-detection-using-deep-learning
 ```
@@ -63,25 +145,25 @@ python src/realtime_detector.py
 
 
 ## Note: 
-This is the correct file name (realtime_detector.py).
-Your webcam will open instantly with live detection, fatigue score, graphs, and alarm sound!
+Your🎥 Webcam will start with live detection + fatigue score + alarm system will open instantly.
 
 
+🚀 Key Innovations
 
+✅ Hybrid CNN + EAR + MAR system
 
+✅ AI-based data augmentation using Stable Diffusion
 
-## 🏗️ System Architecture
+✅ Real-time fatigue scoring (not just classification)
 
-The system uses a **hybrid approach** (fast rule-based + deep learning) for reliable real-time drowsiness detection.
+✅ Multi-condition alarm logic
 
-### Flow:
-1. **Webcam Input** → Live video frames  
-2. **MediaPipe Face Mesh** → 468 facial landmarks  
-3. **EAR + MAR Calculation** → Quick eye/yawn detection  
-4. **MobileNetV2 CNN** → Classifies eyes & mouth (96.5% accurate)  
-5. **Decision Fusion** → Combines everything into Fatigue Score  
-6. **Alert System** → Alarm + UI graphs if drowsy  
+🔮 Future Improvements
 
-**Why it works**: Lightweight (MobileNetV2 runs on laptop/mobile), very accurate, and almost no false alarms.
+Night vision (infrared camera)
 
-(Architecture diagram coming soon — we will add screenshot here next!)
+Mobile app (Android/iOS)
+
+Cloud-based monitoring system
+
+Voice-based alerts
