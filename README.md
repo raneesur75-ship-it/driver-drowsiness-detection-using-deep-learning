@@ -6,7 +6,7 @@
 [![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10%2B-purple)](https://mediapipe.dev)
 
 > Real-time driver drowsiness detection using CNN (MobileNetV2) and Computer Vision.  
-> **96.5% accuracy** | **4-class classification** | **Real-time alarm system**
+> **96.68% accuracy** | **4-class classification** | **Real-time alarm system**
 
 ## 📸 Demo
 <p align="center">
@@ -35,21 +35,25 @@ This system detects early fatigue signs and alerts the driver in real-time — a
 
 - **Real-time Detection**: Webcam monitoring with MediaPipe Face Mesh (468 landmarks)
 - **Hybrid Intelligence**: Eye Aspect Ratio (EAR) + Mouth Aspect Ratio (MAR) + MobileNetV2 CNN
-- **AI-Powered**: 96.5% test accuracy on 4 classes (Closed_Eyes, Open_Eyes, No_Yawn, Yawn)
+- **AI-Powered**: 96.68% test accuracy on 4 classes (Closed_Eyes, Open_Eyes, No_Yawn, Yawn)
 - **Smart Augmentation**: Stable Diffusion for synthetic data
 - **Professional UI**: Live fatigue score (0–100%), real-time graphs, status indicators
 - **Multi-trigger Alarm**: Eye closure, yawning, head nodding + sound alerts
 
 ## 📊 Performance Metrics
 
-| Class       | Accuracy | Notes                     |
-|-------------|----------|---------------------------|
-| Closed_Eyes | ~99%     | Almost perfect detection  |
-| Open_Eyes   | ~99%     | Clear pattern recognition |
-| No_Yawn     | ~95%     | Good distinction          |
-| Yawn        | 95.8%    | High recall for safety    |
 
-**Overall Test Accuracy: 96.50%** on 572 test images
+## 📊 Performance Metrics
+
+| Class       | Accuracy | Correct Predictions |
+|-------------|----------|---------------------|
+| Closed_Eyes | 100.00%  | 143/143             |
+| Open_Eyes   | 98.60%   | 141/143             |
+| No_Yawn     | 93.01%   | 133/143             |
+| Yawn        | 95.10%   | 136/143             |
+
+**Overall Test Accuracy: 96.68%** on 572 held-out test images.
+
 
 ## 📚 Dataset
 
